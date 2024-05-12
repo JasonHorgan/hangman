@@ -34,11 +34,15 @@ def play_game(word):
     while win==False:
         print("number of lives = " + str(lives))
         guess = input("Please guess a word: ")
-        if guess in word:
-            print("Congrats, you won!")
-        else:
+        if guess not in word:
             print("Wrong! Guess another word")
-            lives =-1
+            lives -=1
+            print(lives)
+            print(guess)
+        else:
+            print("Congrats, you won!")
+            break
+            
                 
 play_game(word)
 
