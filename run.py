@@ -4,7 +4,7 @@ import random
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
-#defining username input and welcome text
+#Variables
 
 word = ["pause" , "train" , "their" , "chair" , "press"]
 
@@ -19,6 +19,8 @@ win = False
 over = False
 
 lose = False
+
+instructions = ""
 
 username = input('Welcome to Hangman! Please enter your username: ')
 
