@@ -31,7 +31,7 @@ def play_game(word):
     lives = 5
     win = False
     
-    while win==False:
+    while lives > 0:
         print("number of lives = " + str(lives))
         guess = input("Please guess a word: ")
         if guess not in word:
