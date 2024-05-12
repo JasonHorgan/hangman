@@ -12,7 +12,7 @@ lives = 5
 
 guesses = []
 
-secret_word = None 
+secret_word = random.choice(word) 
 
 win = False
 
@@ -24,4 +24,11 @@ instructions = ""
 
 username = input('Welcome to Hangman! Please enter your username: ')
 
-print("Hello, " +username + "! Good luck in the game!")
+#print("Hello, " +username + "! Good luck in the game!")
+
+def play_game():
+    lives = 5
+    win = False
+    lose = False
+
+print(secret_word)
