@@ -8,5 +8,18 @@ import random
 
 word = ["pause" , "train" , "their" , "chair" , "press"]
 
+lives = 5
+
+guesses = []
+
+secret_word = None 
+
+win = False
+
+over = False
+
+lose = False
+
 username = input('Welcome to Hangman! Please enter your username: ')
+
 print("Hello, " +username + "! Good luck in the game!")
