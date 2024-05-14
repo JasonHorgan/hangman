@@ -32,7 +32,7 @@ def play_game(word):
     win = False
     
     while lives > 0:
-        print("number of lives = " + str(lives))
+        print("number of lives remaining = " + str(lives))
         guess = input("Please guess a word: ")
         if guess not in word:
             print("Wrong! Guess another word")
@@ -41,6 +41,7 @@ def play_game(word):
             print(guess)
         else:
             print("Congrats, you won!")
+            print("You finished with " + str(lives) + " lives remaining")
             break
             
                 
