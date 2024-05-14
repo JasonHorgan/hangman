@@ -26,7 +26,7 @@ username = input('Welcome to Hangman! Please enter your username: ')
 
 #print("Hello, " +username + "! Good luck in the game!")
 
-def play_game(word):
+def play_game(secret_word):
     print(username) 
     lives = 5
     win = False
@@ -34,7 +34,7 @@ def play_game(word):
     while lives > 0:
         print("number of lives remaining = " + str(lives))
         guess = input("Please guess a word: ")
-        if guess not in word:
+        if guess not in secret_word:
             print("Wrong! Guess another word")
             lives -=1
             print(lives)
@@ -45,7 +45,7 @@ def play_game(word):
             break
             
                 
-play_game(word)
+play_game(secret_word)
 
 
 
