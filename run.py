@@ -24,7 +24,7 @@ lose = False
 
 instructions = ""
 
-user_score = lives*50
+user_score = None
 
 #username = input('Welcome to Hangman! Please enter your username: ')
 
@@ -48,6 +48,7 @@ def play_game(secret_word):
             print("Words guessed so far: " + " , ".join(guesses))
         else:
             print("Congrats, you won!")
+            user_score = lives*50
             print("You finished with " + str(lives) + " lives remaining")
             print("You scored " + str(user_score) + " points")
             break
