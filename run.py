@@ -12,6 +12,8 @@ lives = 5
 
 guesses = []
 
+guess = []
+
 secret_word = random.choice(word) 
 
 win = False
@@ -22,12 +24,15 @@ lose = False
 
 instructions = ""
 
-username = input('Welcome to Hangman! Please enter your username: ')
+#username = input('Welcome to Hangman! Please enter your username: ')
+
+username = None
 
 #print("Hello, " +username + "! Good luck in the game!")
 
 def play_game(secret_word):
-    print(username) 
+    username = input("Please enter your username: ") 
+    print("Hi, " + username + " welcome to the word guess game! Good luck!")
     lives = 5
     win = False
     
@@ -36,13 +41,16 @@ def play_game(secret_word):
         guess = input("Please guess a word: ")
         if guess not in secret_word:
             print("Wrong! Guess another word")
+            guesses.append(guess)
             lives -=1
+            print("Words guessed so far: ")
             print(lives)
             print(guess)
         else:
             print("Congrats, you won!")
             print("You finished with " + str(lives) + " lives remaining")
             break
+
             
                 
 play_game(secret_word)
