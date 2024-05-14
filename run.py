@@ -12,7 +12,7 @@ lives = 5
 
 guesses = []
 
-guess = []
+guess = None
 
 secret_word = random.choice(word) 
 
@@ -23,6 +23,8 @@ over = False
 lose = False
 
 instructions = ""
+
+user_score = lives*50
 
 #username = input('Welcome to Hangman! Please enter your username: ')
 
@@ -43,12 +45,11 @@ def play_game(secret_word):
             print("Wrong! Guess another word")
             guesses.append(guess)
             lives -=1
-            print("Words guessed so far: ")
-            print(lives)
-            print(guess)
+            print("Words guessed so far: " + " , ".join(guesses))
         else:
             print("Congrats, you won!")
             print("You finished with " + str(lives) + " lives remaining")
+            print("You scored " + str(user_score) + " points")
             break
 
             
