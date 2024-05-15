@@ -12,9 +12,9 @@ lives = 5
 
 guesses = []
 
-guess = None
+guessed_letter = []
 
-secret_word = random.choice(word) 
+guess = None
 
 win = False
 
@@ -32,11 +32,20 @@ username = None
 
 #print("Hello, " +username + "! Good luck in the game!")
 
-def play_game(secret_word):
+def check_letter(secret_word , guess):
+    print( guess + " is in the word!")
+    print("The letter was found at position " + str(secret_word.find(guess)+1))
+
+def get_secret_word():
+    secret_word = random.choice(word)
+    return secret_word
+
+def play_game():
     username = input("Please enter your username: ") 
     print("Hi, " + username + " welcome to the word guess game! Good luck!")
     lives = 5
     win = False
+    secret_word = get_secret_word()
     
     while lives > 0:
         print("number of lives remaining = " + str(lives))
@@ -46,18 +55,21 @@ def play_game(secret_word):
             guesses.append(guess)
             lives -=1
             print("Words guessed so far: " + " , ".join(guesses))
+
+        elif len(guess) == 1 and guess in secret_word:
+            check_letter(secret_word , guess)
         else:
             print("Congrats, you won!")
+            print("The word was " + secret_word)
             user_score = lives*50
             print("You finished with " + str(lives) + " lives remaining")
             print("You scored " + str(user_score) + " points")
             break
 
-            
-                
-play_game(secret_word)
+    if lives == 0:
+        print("Unlucky! The word was" + secret_word)
 
 
+   
 
-
-print(secret_word)
+play_game()
