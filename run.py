@@ -58,6 +58,8 @@ def play_game():
 
         elif len(guess) == 1 and guess in secret_word:
             check_letter(secret_word , guess)
+            guesses.append(guess)
+            print("Words guessed so far: " + " , ".join(guesses))
         else:
             print("Congrats, you won!")
             print("The word was " + secret_word)
