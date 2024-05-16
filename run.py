@@ -40,6 +40,14 @@ def get_secret_word():
     secret_word = random.choice(word)
     return secret_word
 
+def you_win(secret_word , guess , lives):
+    if len(guess) == 5 and guess in secret_word:
+            print("Congrats, you won!")
+            print("The word was " + secret_word)
+            user_score = lives*50
+            print("You finished with " + str(lives) + " lives remaining")
+            print("You scored " + str(user_score) + " points")    
+
 def play_game():
     username = input("Please enter your username: ") 
     print("Hi, " + username + " welcome to the word guess game! Good luck!")
@@ -61,15 +69,12 @@ def play_game():
             guesses.append(guess)
             print("Words guessed so far: " + " , ".join(guesses))
         else:
-            print("Congrats, you won!")
-            print("The word was " + secret_word)
-            user_score = lives*50
-            print("You finished with " + str(lives) + " lives remaining")
-            print("You scored " + str(user_score) + " points")
+            you_win(secret_word , guess , lives)
+
             break
 
     if lives == 0:
-        print("Unlucky! The word was" + secret_word)
+        print("Unlucky! The word was " + secret_word)
 
 
    
