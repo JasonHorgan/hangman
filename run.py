@@ -30,7 +30,17 @@ user_score = None
 
 username = None
 
+start = None
+
 #print("Hello, " +username + "! Good luck in the game!")
+
+"""
+        start = input("Press Y to play again ")
+    if start == "Y":
+        play_game()
+    else:
+        print("Ok, come back when you want to play! ")
+"""
 
 def how_to_play():
     """
@@ -45,8 +55,8 @@ def how_to_play():
     start = input("Press Y to play game ")
     if start == "Y":
         play_game()
-    else:
-        how_to_play()
+    else: 
+        print("Ok, come back when you want to play! ") 
 
 
 def check_letter(secret_word , guess):
@@ -92,8 +102,11 @@ def play_game():
 
     if lives == 0:
         print("Unlucky! The word was " + secret_word)
+        print("Would you like to play again?")
+       
+
 
 
    
 how_to_play()
-play_game()
+
