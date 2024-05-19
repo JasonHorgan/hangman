@@ -32,6 +32,18 @@ username = None
 
 #print("Hello, " +username + "! Good luck in the game!")
 
+def how_to_play():
+    """
+    prints game instructions
+    """
+    print("Welcome to the word guessing game\n")
+    print("Your goal is to guess the word in the least amount of attempts\n")
+    print("You can only guess a single letter or a 5 letter word\n")
+    print("If your guess is not in the word, you lose a life\n")
+    print("You need to keep making guesses until you get the word or run out of lives\n")
+    print("Have fun!!!")
+
+
 def check_letter(secret_word , guess):
     print( guess + " is in the word!")
     print("The letter was found at position " + str(secret_word.find(guess)+1))
@@ -78,5 +90,5 @@ def play_game():
 
 
    
-
+how_to_play()
 play_game()
