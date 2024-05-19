@@ -42,6 +42,11 @@ def how_to_play():
     print("If your guess is not in the word, you lose a life\n")
     print("You need to keep making guesses until you get the word or run out of lives\n")
     print("Have fun!!!")
+    start = input("Press Y to play game ")
+    if start == "Y":
+        play_game()
+    else:
+        how_to_play()
 
 
 def check_letter(secret_word , guess):
