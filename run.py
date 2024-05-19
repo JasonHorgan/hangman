@@ -50,7 +50,7 @@ def how_to_play():
     print("Your goal is to guess the word in the least amount of attempts\n")
     print("You can only guess a single letter or a 5 letter word\n")
     print("If your guess is not in the word, you lose a life\n")
-    print("You need to keep making guesses until you get the word or run out of lives\n")
+    print("Keep making guesses until you get the word or run out of lives\n")
     print("Have fun!!!")
     start = input("Press Y to play game ")
     if start == "Y":
