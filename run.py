@@ -38,13 +38,7 @@ start = None
 
 #print("Hello, " +username + "! Good luck in the game!")
 
-"""
-        start = input("Press Y to play again ")
-    if start == "Y":
-        play_game()
-    else:
-        print("Ok, come back when you want to play! ")
-"""
+
 
 def how_to_play():
     """
@@ -85,7 +79,15 @@ def you_win(secret_word , guess , lives):
             print("The word was " + secret_word)
             user_score = lives*50
             print("You finished with " + str(lives) + " lives remaining")
-            print("You scored " + str(user_score) + " points")    
+            print("You scored " + str(user_score) + " points") 
+
+def restart():
+        print("Would you like to play again? ")
+        start = input("Press Y to play again ").upper()
+        if start == "Y":
+            play_game()
+        else:
+            main_menu   
 
 def play_game():
     username = input("Please enter your username: ") 
@@ -93,6 +95,7 @@ def play_game():
     lives = 5
     win = False
     secret_word = get_secret_word()
+    guesses = []
     
     while lives > 0:
         print("number of lives remaining = " + str(lives))
@@ -109,12 +112,13 @@ def play_game():
             print("Words guessed so far: " + " , ".join(guesses))
         else:
             you_win(secret_word , guess , lives)
+            restart()
 
             break
 
     if lives == 0:
         print("Unlucky! The word was " + secret_word)
-        print("Would you like to play again?")
+        restart()
        
 
 
