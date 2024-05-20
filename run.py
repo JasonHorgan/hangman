@@ -93,7 +93,7 @@ def play_game():
     
     while lives > 0:
         print("number of lives remaining = " + str(lives))
-        guess = input("Please guess a word: ")
+        guess = input("Please guess a word: ").lower()
         if guess not in secret_word:
             print("Wrong! Guess another word")
             guesses.append(guess)
