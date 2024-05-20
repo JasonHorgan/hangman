@@ -52,11 +52,20 @@ def how_to_play():
     print("If your guess is not in the word, you lose a life\n")
     print("Keep making guesses until you get the word or run out of lives\n")
     print("Have fun!!!")
-    start = input("Press Y to play game ")
-    if start == "Y":
+
+
+
+def main_menu():
+    print("Welcome to the word guess game! ")
+    print("Please type 1 to start the game or 2 to see instructions ")
+    selection = input("Type 1 to start the game or 2 to see instructions ")
+    menu_option = ['1' , '2']
+    if selection == '1':
         play_game()
-    else: 
-        print("Ok, come back when you want to play! ") 
+    elif selection == '2':
+        how_to_play()
+    else: print("Please come back when you wish to play!")
+
 
 
 def check_letter(secret_word , guess):
@@ -106,7 +115,5 @@ def play_game():
        
 
 
-
-   
-how_to_play()
+main_menu()
 
