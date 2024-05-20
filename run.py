@@ -1,4 +1,7 @@
+import coloroma
+from coloroma import Fore, Back, Style
 import random 
+
 
 # Your code goes here.
 # You can delete these comments, but do not change the name of this file
@@ -51,7 +54,7 @@ def how_to_play():
     print("You can only guess a single letter or a 5 letter word\n")
     print("If your guess is not in the word, you lose a life\n")
     print("Keep making guesses until you get the word or run out of lives\n")
-    print("Have fun!!!")
+    print("Have fun!!!\n")
 
 
 
@@ -59,7 +62,6 @@ def main_menu():
     print("Welcome to the word guess game! ")
     print("Please type 1 to start the game or 2 to see instructions ")
     selection = input("Type 1 to start the game or 2 to see instructions ")
-    menu_option = ['1' , '2']
     if selection == '1':
         play_game()
     elif selection == '2':
