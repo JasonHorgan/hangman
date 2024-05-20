@@ -1,5 +1,6 @@
-import coloroma
-from coloroma import Fore, Back, Style
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 import random 
 
 
@@ -71,7 +72,7 @@ def main_menu():
 
 
 def check_letter(secret_word , guess):
-    print( guess + " is in the word!")
+    print(Fore.GREEN + guess + " is in the word!")
     print("The letter was found at position " + str(secret_word.find(guess)+1))
 
 def get_secret_word():
@@ -80,7 +81,7 @@ def get_secret_word():
 
 def you_win(secret_word , guess , lives):
     if len(guess) == 5 and guess in secret_word:
-            print("Congrats, you won!")
+            print(Fore.GREEN + "Congrats, you won!")
             print("The word was " + secret_word)
             user_score = lives*50
             print("You finished with " + str(lives) + " lives remaining")
@@ -97,7 +98,7 @@ def play_game():
         print("number of lives remaining = " + str(lives))
         guess = input("Please guess a word: ").lower()
         if guess not in secret_word:
-            print("Wrong! Guess another word")
+            print(Fore.RED + "Wrong! Guess another word")
             guesses.append(guess)
             lives -=1
             print("Words guessed so far: " + " , ".join(guesses))
