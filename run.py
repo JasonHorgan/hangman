@@ -87,7 +87,7 @@ def restart():
         if start == "Y":
             play_game()
         else:
-            main_menu   
+            main_menu()
 
 def play_game():
     username = input("Please enter your username: ") 
