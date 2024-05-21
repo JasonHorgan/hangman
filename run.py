@@ -38,7 +38,6 @@ def how_to_play():
     print("Have fun!!!\n")
 
 
-
 def main_menu():
     print("Welcome to the word guess game! ")
     print("Please type 1 to start the game or 2 to see instructions ")
@@ -77,9 +76,12 @@ def restart():
 
             if start not in valid_choices:
                 print("Invalid choice, enter Y or N ")
-            elif start == 'Y':
+            else: 
+                break 
+
+        if start == 'Y':
                 play_game()
-            elif start == 'N':
+        elif start == 'N':
                 main_menu()
 
 
