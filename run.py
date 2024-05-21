@@ -80,7 +80,7 @@ def restart():
         valid_choices = ('Y' , 'N')
 
         while True:
-            start = input("Press Y to play again or N for main menu \n").upper()
+            start = input("Press Y to play again or N for main menu\n").upper()
 
             if start not in valid_choices:
                 print("Invalid choice, enter Y or N \n")

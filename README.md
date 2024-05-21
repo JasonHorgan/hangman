@@ -1,32 +1,29 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Word Guess game
 
-Welcome,
+# Intro
+This is my PP3 project to create a word guess game using Python. This runs using the code institute template and is deploted using Heroku. The goal is to guess the secret word before you run out of lives. The user can either guess a single letter or a 5 letter word. Once they guess the word, they will see their score. 
+I took inspiration from Hangman and the popular game wordle to come up with this idea. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+Live game can be seen here - LINK TO DEPLOYED GAME
 
-## Reminders
+## User Experience
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+### User Stories
 
-## Creating the Heroku app
+As the creator of this site I want to create a game that is easy for users to understand, fun to play and also challenging but gives a sense of achievement when complete. 
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+As a first time visitor of the site I want to be able to easily understand what is going on, know where to find instructions if needed and feel compelled to come back and play again. 
 
-1. `heroku/python`
-2. `heroku/nodejs`
+As a returning visitor I want to be able to play the same game with a different word every time I play the game and feel a sense of accomplishment when I get the word right. 
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Design 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Colour
 
-Connect your GitHub repository and deploy as normal.
+There are colours used in the game text which are imported from the Colorama plugin. Green is used to display a correct letter or word guessed and red is used to represent an incorrect guess. 
 
-## Constraints
+### Flow Chart 
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+A flow chart was created using Lucid chart. This was my first time using LucidChart and although it took a little getting used to and I still feel I have a long way to go, this really helped me map out my project and break it down into easy to digest sections so I always knew what I needed to code next. 
 
----
-
-Happy coding!
+## Features 
