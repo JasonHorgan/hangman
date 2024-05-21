@@ -56,7 +56,7 @@ def how_to_play():
 def main_menu():
     print("Welcome to the word guess game! ")
     print("Please type 1 to start the game or 2 to see instructions ")
-    selection = input("Type 1 to start the game or 2 to see instructions ")
+    selection = input("Type 1 to start the game or 2 to see instructions \n")
     if selection == '1':
         play_game()
     elif selection == '2':
@@ -83,14 +83,14 @@ def you_win(secret_word , guess , lives):
 
 def restart():
         print("Would you like to play again? ")
-        start = input("Press Y to play again ").upper()
+        start = input("Press Y to play again \n").upper()
         if start == "Y":
             play_game()
         else:
             main_menu()
 
 def play_game():
-    username = input("Please enter your username: ") 
+    username = input("Please enter your username: \n") 
     print("Hi, " + username + " welcome to the word guess game! Good luck!")
     lives = 5
     win = False
@@ -99,7 +99,7 @@ def play_game():
     
     while lives > 0:
         print("number of lives remaining = " + str(lives))
-        guess = input("Please guess a word: ").lower()
+        guess = input("Please guess a word: \n").lower()
         if guess not in secret_word:
             print(Fore.RED + "Wrong! Guess another word")
             guesses.append(guess)
