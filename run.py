@@ -41,14 +41,22 @@ def how_to_play():
 def main_menu():
     print("Welcome to the word guess game! ")
     print("Please type 1 to start the game or 2 to see instructions ")
-    selection = input("Type 1 to start the game or 2 to see instructions \n")
-    if selection == '1':
-        play_game()
-    elif selection == '2':
-        how_to_play()
-    else: print("Please come back when you wish to play!")
 
+    valid_choices = ('1' , '2')
 
+    while True:
+        start = input("Type 1 to start the game or 2 to see instructions \n")
+
+        if start not in valid_choices:
+                print("Invalid choice, enter 1 or 2 ")
+        else: 
+            break 
+
+    if start == '1':
+                play_game()
+    elif start == '2':
+                how_to_play()
+    
 
 def check_letter(secret_word , guess):
     print(Fore.GREEN + guess + " is in the word!")
@@ -117,5 +125,5 @@ def play_game():
        
 
 
-restart()
+main_menu()
 
