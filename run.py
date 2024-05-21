@@ -3,11 +3,6 @@ from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 import random 
 
-
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-
 #Variables
 
 word = ["pause" , "train" , "their" , "chair" , "press"]
@@ -30,13 +25,10 @@ instructions = ""
 
 user_score = None
 
-#username = input('Welcome to Hangman! Please enter your username: ')
-
 username = None
 
 start = None
 
-#print("Hello, " +username + "! Good luck in the game!")
 
 
 
