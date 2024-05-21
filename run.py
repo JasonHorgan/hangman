@@ -39,8 +39,8 @@ def how_to_play():
 
 
 def main_menu():
-    print("Welcome to the word guess game! ")
-    print("Please type 1 to start the game or 2 to see instructions ")
+    print("Welcome to the word guess game! \n")
+    print("Please type 1 to start the game or 2 to see instructions \n")
 
     valid_choices = ('1' , '2')
 
@@ -48,7 +48,7 @@ def main_menu():
         start = input("Type 1 to start the game or 2 to see instructions \n")
 
         if start not in valid_choices:
-                print("Invalid choice, enter 1 or 2 ")
+                print("Invalid choice, enter 1 or 2 \n")
         else: 
             break 
 
@@ -68,14 +68,14 @@ def get_secret_word():
 
 def you_win(secret_word , guess , lives):
     if len(guess) == 5 and guess in secret_word:
-            print(Fore.GREEN + "Congrats, you won!")
+            print(Fore.GREEN + "Congrats, you won! \n")
             print("The word was " + secret_word)
             user_score = lives*50
-            print("You finished with " + str(lives) + " lives remaining")
-            print("You scored " + str(user_score) + " points") 
+            print("You finished with " + str(lives) + " lives remaining \n")
+            print("You scored " + str(user_score) + " points \n") 
 
 def restart():
-        print("Would you like to play again? ")
+        print("Would you like to play again? \n")
 
         valid_choices = ('Y' , 'N')
 
@@ -83,7 +83,7 @@ def restart():
             start = input("Press Y to play again or N for main menu \n").upper()
 
             if start not in valid_choices:
-                print("Invalid choice, enter Y or N ")
+                print("Invalid choice, enter Y or N \n")
             else: 
                 break 
 
@@ -95,7 +95,7 @@ def restart():
 
 def play_game():
     username = input("Please enter your username: \n") 
-    print("Hi, " + username + " welcome to the word guess game! Good luck!")
+    print("Hi, " + username + " welcome to the word guess game! Good luck! \n")
     lives = 5
     secret_word = get_secret_word()
     guesses = []
@@ -104,7 +104,7 @@ def play_game():
         print("number of lives remaining = " + str(lives))
         guess = input("Please guess a word: \n").lower()
         if guess not in secret_word:
-            print(Fore.RED + "Wrong! Guess another word")
+            print(Fore.RED + "Wrong! Guess another word \n")
             guesses.append(guess)
             lives -=1
             print("Words guessed so far: " + " , ".join(guesses))
