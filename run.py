@@ -15,12 +15,6 @@ guessed_letter = []
 
 guess = None
 
-win = False
-
-over = False
-
-lose = False
-
 instructions = ""
 
 user_score = None
@@ -75,17 +69,24 @@ def you_win(secret_word , guess , lives):
 
 def restart():
         print("Would you like to play again? ")
-        start = input("Press Y to play again \n").upper()
-        if start == "Y":
-            play_game()
-        else:
-            main_menu()
+
+        valid_choices = ('Y' , 'N')
+
+        while True:
+            start = input("Press Y to play again or N for main menu \n").upper()
+
+            if start not in valid_choices:
+                print("Invalid choice, enter Y or N ")
+            elif start == 'Y':
+                play_game()
+            elif start == 'N':
+                main_menu()
+
 
 def play_game():
     username = input("Please enter your username: \n") 
     print("Hi, " + username + " welcome to the word guess game! Good luck!")
     lives = 5
-    win = False
     secret_word = get_secret_word()
     guesses = []
     
@@ -114,5 +115,5 @@ def play_game():
        
 
 
-main_menu()
+restart()
 
