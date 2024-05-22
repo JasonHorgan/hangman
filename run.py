@@ -99,10 +99,23 @@ def play_game():
     lives = 5
     secret_word = get_secret_word()
     guesses = []
-    
+
     while lives > 0:
         print("number of lives remaining = " + str(lives))
-        guess = input("Please guess a word: \n").lower()
+        #guess = input("Please guess a word: \n").lower()
+
+        while True: 
+            guess = input("Please guess a word: \n").lower()
+
+            if len(guess) >=2 and len(guess) <=4:
+                print('Guess can only be single letter or 5 letter word, try again\n')
+            
+            elif len(guess) >=6 or not guess.isalpha():
+                print('Guess can only be single letter or 5 letter word, try again\n')
+
+            else:
+                 break
+
         if guess not in secret_word:
             print(Fore.RED + "Wrong! Guess another word \n")
             guesses.append(guess)
@@ -125,5 +138,39 @@ def play_game():
        
 
 
-main_menu()
+
+"""
+def play_game():
+    username = input("Please enter your username: \n") 
+    print("Hi, " + username + " welcome to the word guess game! Good luck! \n")
+    lives = 5
+    secret_word = get_secret_word()
+    guesses = []
+
+    while lives > 0:
+        print("number of lives remaining = " + str(lives))
+        guess = input("Please guess a word: \n").lower()
+        if guess not in secret_word:
+            print(Fore.RED + "Wrong! Guess another word \n")
+            guesses.append(guess)
+            lives -=1
+            print("Words guessed so far: " + " , ".join(guesses))
+
+        elif len(guess) == 1 and guess in secret_word:
+            check_letter(secret_word , guess)
+            guesses.append(guess)
+            print("Words guessed so far: " + " , ".join(guesses))
+        else:
+            you_win(secret_word , guess , lives)
+            restart()
+
+            break
+
+    if lives == 0:
+        print("Unlucky! The word was " + secret_word)
+        restart()
+ """      
+
+
+play_game()
 
