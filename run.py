@@ -20,6 +20,20 @@ def how_to_play():
     print("If your guess is not in the word, you lose a life\n")
     print("Keep making guesses until you get the word or run out of lives\n")
     print("Have fun!!!\n")
+    valid_choices = ('1' , '2')
+
+    while True:
+        start = input("Type 1 to start the game or 2 to quit \n")
+
+        if start not in valid_choices:
+                print("Invalid choice, enter 1 or 2 \n")
+        else: 
+            break 
+
+    if start == '1':
+                play_game()
+    elif start == '2':
+                print('See you next time! ')
 
 
 def main_menu():
@@ -33,7 +47,7 @@ def main_menu():
         start = input("Type 1 to start the game, 2 to see instructions or 3 to quit \n")
 
         if start not in valid_choices:
-                print("Invalid choice, enter 1 or 2 \n")
+                print(Fore.RED + "Invalid choice, enter 1 or 2 \n")
         else: 
             break 
 
@@ -56,10 +70,10 @@ def get_secret_word():
 def you_win(secret_word , guess , lives):
     if len(guess) == 5 and guess in secret_word:
             print(Fore.GREEN + "Congrats, you won! \n")
-            print("The word was " + secret_word)
+            print("The word was " + Fore.GREEN + secret_word)
             user_score = lives*50
             print("You finished with " + str(lives) + " lives remaining \n")
-            print("You scored " + str(user_score) + " points \n") 
+            print("You scored " + Fore.YELLOW + str(user_score) + " points \n") 
 
 def restart():
         print("Would you like to play again? \n")
@@ -70,7 +84,7 @@ def restart():
             start = input("Press Y to play again or N to quit\n").upper()
 
             if start not in valid_choices:
-                print("Invalid choice, enter Y or N \n")
+                print(Fore.RED + "Invalid choice, enter Y or N \n")
             else: 
                 break 
 
@@ -94,15 +108,15 @@ def play_game():
         
 
         while True: 
-            guess = input("Please guess a word: \n").lower()
+            guess = input("Please guess a letter or word: \n").lower()
 
             if len(guess) >=2 and len(guess) <=4:
-                print('Guess can only be single letter or 5 letter word, try again\n')
+                print(Fore.RED + 'Guess can only be single letter or 5 letter word, try again\n')
             
             elif len(guess) >=6:
                 print('Guess must only be 5 letter in length \n')
             elif not guess.isalpha():
-                print("Guess must only contain letters ")
+                print(Fore.RED + "Guess must only contain letters ")
 
             else:
                  break
@@ -124,7 +138,7 @@ def play_game():
             break
 
     if lives == 0:
-        print("Unlucky! The word was " + secret_word)
+        print("Unlucky! The word was " + Fore.RED + secret_word)
         restart()
        
 
