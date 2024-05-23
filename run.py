@@ -4,7 +4,17 @@ from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 # Variables
 STARTING_LIVES = 5
-word = ["pause", "train", "their", "chair", "press"]
+word = ["pause", "train", "their", "chair", "alone",
+        "arise", "brain", "court", "doubt", "entry",
+        "fruit", "grade", "ghost", "horse", "knife",
+        "learn", "large", "movie", "media", "noise",
+        "newly", "ocean", "often", "phone", "place",
+        "power", "pitch", "quiet", "quick", "relax",
+        "rapid", "ready", "stare", "sound", "smart"
+        "stake", "shrug", "space", "shine", "scope",
+        "shock", "trend", "thing", "thick", "thank",
+        "under", "urban", "vital", "video", "voice",
+        "waste", "woman", "works", "youth", "young"]
 
 
 def how_to_play():
