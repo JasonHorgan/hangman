@@ -4,7 +4,7 @@
 This is my PP3 project to create a word guess game using Python. This runs using the code institute template and is deploted using Heroku. The goal is to guess the secret word before you run out of lives. The user can either guess a single letter or a 5 letter word. Once they guess the word, they will see their score. 
 I took inspiration from Hangman and the popular game wordle to come up with this idea. 
 
-Live game can be seen here - LINK TO DEPLOYED GAME
+Live game can be seen here - [LINK TO DEPLOYED GAME](https://jasonhorgan-pp3-4675d38d4f6d.herokuapp.com/)
 
 ## User Experience
 
