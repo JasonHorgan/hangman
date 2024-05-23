@@ -43,10 +43,10 @@ def how_to_play():
 
 def main_menu():
     """
-    function to welcome user to the game, 
+    function to welcome user to the game,
     ask for their username and give them the option to either
     play game, see rules of game or quit game.
-    also included input validation 
+    also included input validation
     """
     print("Welcome to the word guess game! \n")
     global username
@@ -67,10 +67,10 @@ def main_menu():
 
 
 def check_letter(secret_word, guess):
-    """ 
-    function to check if a guessed single letter is in the word. 
+    """
+    function to check if a guessed single letter is in the word.
     if it is, prints a statement telling the user the position
-    of the guessed letter. 
+    of the guessed letter.
     added +1 as to not confuse the user
     """
     print(Fore.GREEN + guess + " is in the word!")
@@ -78,7 +78,7 @@ def check_letter(secret_word, guess):
 
 
 def get_secret_word():
-    """ 
+    """
     This function pulls a random word from the words array
     so it can be used in the game later
     """
@@ -87,7 +87,7 @@ def get_secret_word():
 
 
 def you_win(secret_word, guess, lives):
-    """ 
+    """
     checks if the users guess is in the word.
     added length of 5, so that this will only trigger
     if they guess the full word and stops the function
@@ -104,9 +104,9 @@ def you_win(secret_word, guess, lives):
 
 
 def restart():
-    """ 
+    """
     function that runs the play game function
-    or exits the game depending on users choice. 
+    or exits the game depending on users choice.
     includes input validation.
     """
     print("Would you like to play again? \n")
@@ -125,14 +125,14 @@ def restart():
 
 def play_game():
     """
-    main game function. 
+    main game function.
     constantly asks user for a guess as long as their lives are above 0.
-    if they guess wrong, remove 1 life. 
-    included .lower in guess input to prevent user error. 
+    if they guess wrong, remove 1 life.
+    included .lower in guess input to prevent user error.
     when lives fall to 0, the user is told the word and asked
-    if they wish to play again. 
+    if they wish to play again.
     if the user guesses correctly it prints their score
-    and asks them to play again. 
+    and asks them to play again.
     """
     print("Hi, " + username + " welcome to the word guess game! Good luck! \n")
     lives = STARTING_LIVES
