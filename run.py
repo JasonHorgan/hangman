@@ -19,7 +19,8 @@ word = ["pause", "train", "their", "chair", "alone",
 
 def how_to_play():
     """
-    prints game instructions
+    prints game instructions and then asks user
+    to either start the game or end the game
     """
     print("Welcome to the word guessing game\n")
     print("Your goal is to guess the word in the least amount of attempts\n")
@@ -41,6 +42,12 @@ def how_to_play():
 
 
 def main_menu():
+    """
+    function to welcome user to the game, 
+    ask for their username and give them the option to either
+    play game, see rules of game or quit game.
+    also included input validation 
+    """
     print("Welcome to the word guess game! \n")
     global username
     username = input("Please enter your username: \n")
@@ -60,16 +67,34 @@ def main_menu():
 
 
 def check_letter(secret_word, guess):
+    """ 
+    function to check if a guessed single letter is in the word. 
+    if it is, prints a statement telling the user the position
+    of the guessed letter. 
+    added +1 as to not confuse the user
+    """
     print(Fore.GREEN + guess + " is in the word!")
     print("Letter was found at position " + str(secret_word.find(guess) + 1))
 
 
 def get_secret_word():
+    """ 
+    This function pulls a random word from the words array
+    so it can be used in the game later
+    """
     secret_word = random.choice(word)
     return secret_word
 
 
 def you_win(secret_word, guess, lives):
+    """ 
+    checks if the users guess is in the word.
+    added length of 5, so that this will only trigger
+    if they guess the full word and stops the function
+    from running if they get a single letter in the word.
+    tells the user they won and prints them a score
+    by multiplying number if lives by 50
+    """
     if len(guess) == 5 and guess in secret_word:
         print(Fore.GREEN + "Congrats, you won! \n")
         print("The word was " + Fore.GREEN + secret_word)
@@ -79,6 +104,11 @@ def you_win(secret_word, guess, lives):
 
 
 def restart():
+    """ 
+    function that runs the play game function
+    or exits the game depending on users choice. 
+    includes input validation.
+    """
     print("Would you like to play again? \n")
     valid_choices = ("Y", "N")
     while True:
@@ -95,7 +125,14 @@ def restart():
 
 def play_game():
     """
-    input explanation
+    main game function. 
+    constantly asks user for a guess as long as their lives are above 0.
+    if they guess wrong, remove 1 life. 
+    included .lower in guess input to prevent user error. 
+    when lives fall to 0, the user is told the word and asked
+    if they wish to play again. 
+    if the user guesses correctly it prints their score
+    and asks them to play again. 
     """
     print("Hi, " + username + " welcome to the word guess game! Good luck! \n")
     lives = STARTING_LIVES
