@@ -3,7 +3,7 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 # Variables
-STARTING_LIVES = 5
+STARTING_LIVES = 7
 word = ["pause", "train", "their", "chair", "alone",
         "arise", "brain", "court", "doubt", "entry",
         "fruit", "grade", "ghost", "horse", "knife",
@@ -32,7 +32,7 @@ def how_to_play():
     while True:
         start = input("Type 1 to start the game or 2 to quit \n")
         if start not in valid_choices:
-            print("Invalid choice, enter 1 or 2 \n")
+            print(Fore.RED + "Invalid choice, enter 1 or 2 \n")
         else:
             break
     if start == "1":
@@ -55,7 +55,7 @@ def main_menu():
     while True:
         start = input("Type 1 to start game, 2 for instructions, 3 to quit \n")
         if start not in valid_choices:
-            print(Fore.RED + "Invalid choice, enter 1 or 2 \n")
+            print(Fore.RED + "Invalid choice, enter 1, 2 or 3 \n")
         else:
             break
     if start == "1":
