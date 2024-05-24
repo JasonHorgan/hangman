@@ -1,7 +1,7 @@
 # Word Guess game
 
 # Intro
-This is my PP3 project to create a word guess game using Python. This runs using the code institute template and is deploted using Heroku. The goal is to guess the secret word before you run out of lives. The user can either guess a single letter or a 5 letter word. Once they guess the word, they will see their score. 
+This is my PP3 project to create a word guess game using Python. This runs using the code institute template and is deployed using Heroku. The goal is to guess the secret word before you run out of lives. The user can either guess a single letter or a 5 letter word. Once they guess the word, they will see their score. 
 I took inspiration from Hangman and the popular game wordle to come up with this idea. 
 
 Live game can be seen here - [Live Word Guess Game](https://jasonhorgan-pp3-4675d38d4f6d.herokuapp.com/)
@@ -65,7 +65,7 @@ If the user wins or loses the game, they will be asked if they want to play agai
 
 Colorama is used to implement colours to make the game more visually appealing and indicate right answers, wrong answers, display the score and also show the user when they have entered an input that is not allowed. 
 
-For input validation, I have included rules so that the user can only enter a guess that is 1 letter in length, 5 letters in length and only contains letters. If the user enters a guess that is more than 1 or 5 letters in length, or contains numbers or characters, they will be shown an error message and asked to input their guess again, as can be seen in the below screenshot. 
+For input validation, I have included rules so that the user can only enter a guess that is 1 letter in length, 5 letters in length and only contains letters. If the user enters a guess that is more than 1 or 5 letters in length, or contains numbers or special characters, they will be shown an error message and asked to input their guess again, as can be seen in the below screenshot. 
 
 <img src="assets/images/input_validation.png">
 
