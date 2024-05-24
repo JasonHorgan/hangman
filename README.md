@@ -93,3 +93,64 @@ Play game:
 Result: Error message prints in red "Guess must only contain letters " if guess is a syymbol. 
 Error message in red : Guess can only be 1 or 5 letters in length: try again
 Error message in red: 
+
+<>img of screenshot
+
+Restart:
+
+- Enter anything other than Y or N
+result: Error message in red "Invalid choice, enter Y or N " and then re run loop asking user for input
+
+## PEP8 validator
+
+PEP8 testing was completed using the CI linter programme - https://pep8ci.herokuapp.com/#
+There were a few errors which I have cleaned up, mainly white spacing and trailing errors. 
+My code runs through the linter programme with no errors now
+<>img of linter ss
+
+## User Testing
+
+I had family and work colleague's test this to see if they could break it and all have thankfully been unsuccessful in breaking it so far.
+
+##Python Libraries
+
+The two libraries I used for this project was the random library to pull a random word from my word array each time the run game function runs so the user has a new experience each time they play the game. I also used Colorama to add some variety and nice visuals to the game. 
+
+##Bugs
+
+The main bug I dealt with during the writing of this code was that when a user entered a guess that contained  only 1 letter - if this letter was in the word, they would win the game. I fixed this by adding the condition that a guess needs to be 5 letters in length in order to win the game. 
+
+# Future implementations
+
+- I would like to implement easy, medium and hard modes which would include either more lives or different length words, depending on the difficulty selected. 
+- I would like to implement a feature that prints back the guessed letter and the position. For example if the user guessed the letter 'a' and this was the second letter, they would see a printed statement saying: word so far: _ a _ _ _ .
+- I would like to add a scoreboard that saves a users high score so people all over the world can play the game and compete for top spot on a leaderboard.
+
+## Deployment
+
+This project was deployed using Heroku and developed using the CI python template - https://github.com/Code-Institute-Org/p3-template
+
+## Deployment procedure
+
+- log into Heroku
+- Create new app 
+- choose an available name and region 
+- as per love sandwiches walkthrough, config var with key PORT and 8000
+- connect to github and deploy
+- deploy early and then deploy finished code from heroku to ensure game is up to date on heroku with all code
+
+# Credits 
+
+https://www.youtube.com/watch?v=m4nEnsavl6w&t=526s - code for play game function referenced from this tutorial 
+
+https://www.simplilearn.com/tutorials/python-tutorial/list-to-string-in-python - used this to figure out how to change an array to a string 
+
+https://www.youtube.com/watch?v=u51Zjlnui4Y&t=464s - Colorama install tutorial
+
+https://www.youtube.com/watch?v=LUWyA3m_-r0  - watched to help me understand and write User input validation 
+
+https://stackoverflow.com/questions/23294658/asking-the-user-for-input-until-they-give-a-valid-response - watched to help me understand and write User input validation 
+
+##Special Thanks
+
+Special thanks to my mentor Graeme who helped and encouraged me throughout this project. He helped to keep me on track and instilled confidence in me by testing my knowledge of core concepts during our meetings. 
