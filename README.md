@@ -26,6 +26,8 @@ There are colours used in the game text which are imported from the Colorama plu
 
 A flow chart was created using Lucid chart. This was my first time using LucidChart and although it took a little getting used to and I still feel I have a long way to go, this really helped me map out my project and break it down into easy to digest sections so I always knew what I needed to code next. 
 
+<img src="assets/images/PP3flowchart.jpeg">
+
 ## Features 
 
 ### Current Features
