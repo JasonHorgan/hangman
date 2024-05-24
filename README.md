@@ -34,7 +34,7 @@ Welcome message:
 
 A very basic welcome message where the user inputs their name to give the game a more personal feel 
 
-img of intro
+<img src="assets/images/Intro.png">
 
 Instructions:
 
