@@ -40,26 +40,24 @@ Instructions:
 
 A brief paragraph explaining to the user the rules of the game and how to play with an option at the end to either start or quit the game
 
-<>img of instructions
+<img src="assets/images/instructions.png">
 
 Main game loop:
 
 The main game is a loop where the user can see how many lives they have and are prompted to enter a guess. The users guess needs to be either 1 letter or 5 letters in length.
 if the letter is not in the word, they will see a message in red telling them the guess was wrong and will then deduct a life and tell them how many lives they have remaining. It will also then show them their current guesses. 
 
-<>img of main game loop with wrong ans
+<img src="assets/images/main-game-loop.png">
 
 If the user guesses a correct letter, they will see a green message telling them the letter they guessed is in the word and it will tell them the position of the letter in the word. They will not be deducted a life for guessing a correct letter. 
 
-<>img of correct guess
+<img src="assets/images/correct-guess.png">
 
 This loop will continue until the user either guesses the word correctly or runs out of lives
 
-<>img of run out of lives
+<img src="assets/images/game-win.png">
 
-<>img of won game
-
-<>img of lose game
+<img src="assets/images/game-lose.png">
 
 If the user wins or loses the game, they will be asked if they want to play again. 
 
@@ -94,7 +92,7 @@ Result: Error message prints in red "Guess must only contain letters " if guess 
 Error message in red : Guess can only be 1 or 5 letters in length: try again
 Error message in red: 
 
-<>img of screenshot
+<img src="assets/images/input_validation.png">
 
 Restart:
 
@@ -106,7 +104,8 @@ result: Error message in red "Invalid choice, enter Y or N " and then re run loo
 PEP8 testing was completed using the CI linter programme - https://pep8ci.herokuapp.com/#
 There were a few errors which I have cleaned up, mainly white spacing and trailing errors. 
 My code runs through the linter programme with no errors now
-<>img of linter ss
+
+<img src="assets/images/linter.png">
 
 ## User Testing
 
