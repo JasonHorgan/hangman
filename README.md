@@ -65,6 +65,8 @@ Colorama is used to implement colours to make the game more visually appealing a
 
 For input validation, I have included rules so that the user can only enter a guess that is 1 letter in length, 5 letters in length and only contains letters. If the user enters a guess that is more than 1 or 5 letters in length, or contains numbers or characters, they will be shown an error message and asked to input their guess again, as can be seen in the below screenshot. 
 
+<img src="assets/images/input_validation.png">
+
 ## Testing
 
 ### Manual testing
